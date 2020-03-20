@@ -26,13 +26,27 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+React is a JavaScript Library that was created by Facebook to solve problems like a lot of events firing and data changing at the same time on the user interface, and they wanna to make this happen without have to refresh the page. So React interact with the DOM with JavaScript using a virtual DOM. When something updates on the virtual DOM… like, changes of the state of the element(which I saw that happens with Boolean, if statemets, event Listeners…), it reacts and update the real DOM displaying. React seems amazing! I’m excited to learn practicing. It seems also that it was created to be able to fix bugs easily, since every component has its own elements and interaction ability. Being able to interact independently, doing only one thing following by what I read on the document that talks about the single responsibility principle, and the component hierarchy, that you pass data to other components using props. And props are a way of passing data from parent to child.
+
 - [ ] What does it mean to _think_ in react?
+
+Break The UI Into A Component Hierarchy - Build A Static Version in React - Identify The Minimal (but complete) Representation Of UI State - Identify Where Your State Should Live - Add Inverse Data Flow -
 
 - [ ] Describe state.
 
+In the React sense, “state” is an object that represents the parts of the app that can change. State for me means, when we think of the current status of the object, the current situation. And it is able to change it.
+
 - [ ] Describe props.
 
+Props make react component reusable so you can use the same component with different data every time. The same principle is used when creating functions we create a function with parameters so we can pass them different arguments every time and get different results.
+
 - [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+
+We’ve learned that useEffect lets us express different kinds of side effects after a component renders.
+
+its a simple component which accepts props. We pass this props as initialState to useState.
+This is perfect use case for useEffect. Whenever props change, we will set the state inside useEffect.
+In this way, whenever props get changed, it will set as the state inside useEffect. useEffect is primarily to handle side effects
 
 ## Project Set Up
 
@@ -45,22 +59,21 @@ Follow these steps to set up and work on your project:
 - [ ] Change directories into `./starwars` (`cd starwars`) and run `npm install` to retrieve all needed dependencies.
 - [ ] Once you have installed the _node_modules_, run `npm start` to get your server up and running.
 - [ ] With the server up and running, open Chrome and head over to `localhost:3000` and view your beautiful app. Maybe it's not _that_ pretty... _yet_, your goal is to ensure this project becomes a thing of beauty.
-Follow these steps for completing your project.
+      Follow these steps for completing your project.
 - [ ] Implement the project on this Branch, **committing progress & changes often.**
 - [ ] Push commits: `git push origin <firstName-lastName>`.
 
 Follow these steps for completing your project:
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
+- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repo).
 - [ ] Add your Project Manager as a Reviewer on the Pull-request.
 - [ ] TL then will count the HW as done by merging the branch back into master.
-
 
 ## Minimum Viable Product
 
 Your finished project must include all of the following requirements:
 
-- [ ] Fetch a list of Star Wars characters from the [Star Wars API (or SWAPI)](https://swapi.co/) and render them to the screen. 
+- [ ] Fetch a list of Star Wars characters from the [Star Wars API (or SWAPI)](https://swapi.co/) and render them to the screen.
 - [ ] Follow the documentation to learn how to fetch a list of "people". However, don't spend _too_ long on this. Here is a link for you to follow if you've looked around the docs for about 15 minutes or so and haven't found where to go - [Secret Link to Awesomeness 🤫](https://swapi.co/documentation#people).
 - [ ] Set the data you fetch to state.
 - [ ] Map over the list and render a component for each character on the page.
@@ -75,11 +88,11 @@ Your finished project must include all of the following requirements:
 - [ ] Spell-check.
 - [ ] Schedule time to review, refine and reassess your work.
 
-
 It is better to submit a challenge that meets [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product) than one that attempts too much and fails.
 
 ## Stretch Problems
-- [ ] Next week we will be looking at React forms. Look a head and try to create a search form that will filter through the data displayed from your characters. 
+
+- [ ] Next week we will be looking at React forms. Look a head and try to create a search form that will filter through the data displayed from your characters.
 
 - [ ] Build a pagination system that will allow you to load the next page of data.
   - `console.log()` the data coming back from the server.
