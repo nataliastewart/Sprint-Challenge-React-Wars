@@ -15,13 +15,6 @@ const Container = styled.div`
   boxsizing: "border-box";
 `;
 
-// const PageContainer = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: space-between;
-// `;
-
 const TitleCard = styled.div`
   border: 2px solid black;
   width: 20%;
@@ -29,10 +22,15 @@ const TitleCard = styled.div`
   box-sizing: border-box;
   border-radius: 10px;
   font-size: 2rem;
-  background-color: #4d3319;
+  background-color: #744a25;
   color: #f9f2ec;
+  max-width: 100%;
 `;
-// border: 3px solid black;
+
+// const ParentFlex = styled.section`
+//   display: flex;
+//   flex-direction: row;
+// `;
 
 const PeopleCard = props => {
   return (
