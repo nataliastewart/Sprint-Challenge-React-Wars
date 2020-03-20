@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
+import PeopleCard from "./PeopleCard";
 
-const App = () => {
+export default function App() {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
   const [people, setPeople] = useState([]);
@@ -11,10 +12,11 @@ const App = () => {
     axios
       .get("https://swapi.co/api/people/")
       .then(response => {
-        console.log("APP RESPONSE: ", response.data);
+        console.log("APP RESPONSE: ", response.data.results);
+        setPeople(response.data.results);
       })
       .catch(error => {
-        console.log("Data was not returned from axios!!!", error);
+        console.log(">>>>>Data was not returned from axios<<<<<", error);
       });
   }, []);
 
@@ -25,8 +27,20 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
+
+      {people.map((warsData, index) => {
+        console.log("WARSDATA: ", warsData);
+        return (
+          <PeopleCard
+            key={index}
+            name={warsData.name}
+            height={warsData.height}
+            eyeColor={warsData.eye_color}
+            skinColor={warsData.skin_color}
+            mass={warsData.mass}
+          />
+        );
+      })}
     </div>
   );
-};
-
-export default App;
+}
