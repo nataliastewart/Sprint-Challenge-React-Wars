@@ -12,12 +12,12 @@ const Container = styled.div`
   border-radius: 10px;
   background-color: #ffffff;
   opacity: 0.6;
-  boxsizing: "border-box";
+  box-sizing: "border-box";
 `;
 
 const TitleCard = styled.div`
   border: 2px solid black;
-  width: 20%;
+  width: 99%;
   margin: 0 auto;
   box-sizing: border-box;
   border-radius: 10px;
@@ -27,16 +27,11 @@ const TitleCard = styled.div`
   max-width: 100%;
 `;
 
-// const ParentFlex = styled.section`
-//   display: flex;
-//   flex-direction: row;
-// `;
-
 const PeopleCard = props => {
   return (
     <>
-      <TitleCard>{props.name}</TitleCard>
       <Container>
+        <TitleCard>{props.name}</TitleCard>
         <h3>Height: {props.height}</h3>
         <h3>Eye Color: {props.eyeColor}</h3>
         <h3>Skin Color: {props.skinColor}</h3>
